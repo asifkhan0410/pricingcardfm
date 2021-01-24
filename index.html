@@ -5,34 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Manrope">
   
   <title>Frontend Mentor | Interactive pricing component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <link rel="stylesheet" href="index.css">
-  <style>
-    
-  </style>
 </head>
 <body>
-  Simple, traffic-based pricing
-  Sign-up for our 30-day trial. No credit card required. 
-
-  Pageviews
-  $ /month
-
-  Monthly Billing
-  Yearly Billing 25% discount
-
-  Unlimited websites
-  100% data ownership
-  Email reports
-
-  Start my trial
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Asif</a>.
-  </div>
+  <div class="body">
+    <div class="container">
+      <div class="body__header">
+        <h1>Simple, traffic-based pricing</h1>
+        <h2>Sign-up for our 30-day trial. No credit card required.</h2>
+      </div>
+      <div class="body__card">
+        <div class="body__cardheader">
+          <div class="body__cardpageviews">100K PAGEVIEWS</div>
+          <div class="body__cardpricing"><span class="body__cardpricingamount">$16.00</span> /month</div>
+        </div>
+        <div class="body__cardscroller"></div>        
+        <div class="body__cardmonthlyandyearly">Monthly Billing
+          Yearly Billing 25% discount</div>
+        <div class="body__cardlower">
+          <div class="body__cardfeatures">
+            <h4><img src='./images/icon-check.svg' class='image-cardfeatures'/>Unlimited websites</h4>
+            <h4><img src='./images/icon-check.svg' class='image-cardfeatures'/>100% data ownership</h4>
+            <h4><img src='./images/icon-check.svg' class='image-cardfeatures'/>Email reports</h4>
+          </div>
+          <button class="body__cardbtn">Start my trial</button>
+        </div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Asif</a>.
+    </div>
+  </div>  
 </body>
 </html>

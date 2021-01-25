@@ -11,6 +11,7 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <link rel="stylesheet" href="index.css">
+  
 </head>
 <body>
   <div class="body">
@@ -21,13 +22,18 @@
       </div>
       <div class="body__card">
         <div class="body__cardheader">
-          <div class="body__cardpageviews">100K PAGEVIEWS</div>
-          <div class="body__cardpricing"><span class="body__cardpricingamount">$16.00</span> /month</div>
+          <div class="body__cardpageviews"><span id="pageviews"></span> PAGEVIEWS</div>
+          <div class="body__cardpricing"><span class="body__cardpricingamount" id="pamount"></span> /month</div>
         </div>
-        <div class="body__cardscroller"></div>        
+        <div class="body__cardscroller">
+          <div class="slidecontainer">
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+            <!-- <p>Value: <span id="demo"></span></p> -->
+          </div>
+        </div>        
         <div class="body__cardmonthlyandyearly">Monthly Billing
           <div class="body__cardbutton r" id="body__cardbutton1">
-            <input type="checkbox" class="body__cardcheckbox">
+            <input type="checkbox" class="body__cardcheckbox" id="checkbox1" onclick="checked()">
             <div class="body__cardknobs"></div>
             <div class="body__cardlayer"></div>
           </div>
@@ -47,6 +53,8 @@
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="#">Asif</a>.
     </div>
-  </div>  
+  </div> 
+  <script type="text/javascript" src="index.js"></script>
+  
 </body>
 </html>

@@ -1,16 +1,33 @@
 
-    var slider = document.getElementById("myRange");
+    let slider;
     var discount = document.getElementById("checkbox");
-    var pricing = document.getElementById("pamount");
-    var pageviews = document.getElementById("pageviews");
-    var overlayslider = document.getElementById("slidecontainer__overlay").style;
+    let pricing;  
+    let pageviews;
+    let overlayslider;
     
     let valueofslider;
-    valueofslider = slider.value;
+    let widthconstant;
+    
     //console.log(overlayslider);
+    
+    if(screen.width <=375){
+        widthconstant=.78;
+        slider = document.getElementById("myRangemobile");
+        pricing = document.getElementById("pamountmobile");
+        pageviews= document.getElementById("pageviewsmobile");
+        overlayslider = document.getElementById("slidecontainer__overlaymobile").style
+    }else if(screen.width > 375){
+        widthconstant=.82;
+        slider= document.getElementById("myRange");
+        pricing =document.getElementById("pamount");
+        pageviews= document.getElementById("pageviews");
+        overlayslider = document.getElementById("slidecontainer__overlay").style
+    }
+    valueofslider = slider.value;
+    overlayslider.width = valueofslider*widthconstant+"%";
     pricing.innerHTML = "$" + 16
     pageviews.innerHTML = 100+"K"
-    overlayslider.width = valueofslider*.82+"%";
+    
 
     discount.onclick = function(){
         console.log(discount.checked)
@@ -24,7 +41,7 @@
     slider.oninput = function() {
       valueofslider = this.value;
       //console.log(this.value)
-        overlayslider.width = this.value*.82+"%";
+        overlayslider.width = this.value*widthconstant+"%";
       discount.onclick = function(){
         console.log(discount.checked)
         if(discount.checked==true){

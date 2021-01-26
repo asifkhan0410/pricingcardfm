@@ -17,6 +17,7 @@
         <h2>Sign-up for our 30-day trial. No credit card required.</h2>
       </div>
       <div class="body__card">
+        <div class='body__carddesktop'>
         <div class="body__cardheader">
           <div class="body__cardpageviews"><span id="pageviews"></span> PAGEVIEWS</div>
           <div class="body__cardpricing"><span class="body__cardpricingamount" id="pamount"></span> /month</div>
@@ -27,13 +28,27 @@
             <span id="slidecontainer__overlay"></span>
             <!-- <p>Value: <span id="demo"></span></p> -->
           </div>
-        </div>        
+        </div> 
+      </div> 
+      <div class='body__cardmobile'>
+        <div class="body__cardheader">
+          <div class="body__cardpageviews"><span id="pageviewsmobile"></span> PAGEVIEWS</div>
+        </div>
+        <div class="body__cardscroller">
+          <div class="slidecontainer">
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRangemobile">
+            <span id="slidecontainer__overlaymobile"></span>
+            <!-- <p>Value: <span id="demo"></span></p> -->
+          </div>
+        </div>
+        <div class="body__cardpricing"><span class="body__cardpricingamount" id="pamountmobile"></span> /month</div> 
+      </div>       
         <div class="body__cardmonthlyandyearly">Monthly Billing
           <label class="switch">
             <input type="checkbox" id="checkbox">
             <span class="toggleslider round"></span>
           </label>      
-          Yearly Billing <span class="body__carddiscount">25% discount</span>
+          Yearly Billing <span class="body__carddiscount">25% discount</span><span class="body__carddiscountresponsive">- 25%</span>
         </div>
         <div class="body__cardlower">
           <div class="body__cardfeatures">
@@ -47,7 +62,7 @@
     </div>
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Asif</a>.
+      Coded by <a href="https://www.frontendmentor.io/profile/asifkhan0410" target="_blank">Asif</a>.
     </div>
   </div> 
   <script type="text/javascript" src="index.js"></script>

@@ -8,8 +8,6 @@
     let valueofslider;
     let widthconstant;
     
-    //console.log(overlayslider);
-    
     if(screen.width <=375){
         widthconstant=.78;
         slider = document.getElementById("myRangemobile");
@@ -30,7 +28,6 @@
     
 
     discount.onclick = function(){
-        console.log(discount.checked)
         if(discount.checked==true){
             pricing.innerHTML = "$" + 12;
         }else{
@@ -40,10 +37,8 @@
 
     slider.oninput = function() {
       valueofslider = this.value;
-      //console.log(this.value)
         overlayslider.width = this.value*widthconstant+"%";
       discount.onclick = function(){
-        console.log(discount.checked)
         if(discount.checked==true){
             if(valueofslider>=0 && valueofslider<20){
                 pricing.innerHTML = "$" + 6 
